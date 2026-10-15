@@ -1,0 +1,76 @@
+Here is your complete, hand-picked cheat sheet of the essential **Git** and **GitHub CLI (`gh`)** commands you need to manage your repositories directly from your terminal.
+
+---
+
+## 🛠️ Part 1: Git Essentials (Local & Remote)
+
+### Setup & Configuration (One-Time)
+
+| Command | Description |
+| --- | --- |
+| `git config --global user.name "Name"` | Set your global Git username |
+| `git config --global user.email "email"` | Set your global Git email |
+| `git config --list` | View your current Git configurations |
+
+### Starting a Project
+
+| Command | Description |
+| --- | --- |
+| `git init` | Initialize a brand new local Git repository in the current folder |
+| `git clone <url>` | Download an existing GitHub repository to your computer |
+
+### The Daily Workflow (Add, Commit, Push)
+
+| Command | Description |
+| --- | --- |
+| `git status` | Check which files are modified, staged, or untracked |
+| `git add <file>` or `git add .` | Stage file(s) for the next commit (`.` means everything) |
+| `git commit -m "message"` | Save staged changes with a descriptive message |
+| `git push` | Upload your committed changes to GitHub |
+| `git pull` | Download and merge the latest changes from GitHub to your PC |
+
+### Branching & Merging
+
+| Command | Description |
+| --- | --- |
+| `git branch` | List all local branches |
+| `git switch -c <name>` (or `git checkout -b`) | Create a new branch and switch to it immediately |
+| `git switch <name>` (or `git checkout`) | Switch to an existing branch |
+| `git merge <branch-name>` | Merge another branch's changes into your current branch |
+
+### Checking History & Undoing
+
+| Command | Description |
+| --- | --- |
+| `git log --oneline` | View a clean history of all your past commits |
+| `git diff` | View exact code changes you made before staging |
+| `git reset <file>` | Unstage a file you added with `git add` |
+
+---
+
+## ⚡ Part 2: GitHub CLI (`gh`) Essentials (Terminal-to-GitHub)
+
+### Authentication
+
+| Command | Description |
+| --- | --- |
+| `gh auth login` | Connect your terminal to your GitHub account securely via browser |
+| `gh auth status` | Check which account you are currently logged into |
+
+### Repository Management
+
+| Command | Description |
+| --- | --- |
+| `gh repo create <name> --public --source=. --push` | **(The ultimate shortcut!)** Creates a GitHub repo from your current local folder and pushes it instantly |
+| `gh repo create <name> --private` | Create a new private repository on GitHub |
+| `gh repo clone <owner/repo>` | Clone any GitHub repository quickly |
+| `gh repo view --web` | Open the current repository directly in your web browser |
+
+### Pull Requests & Issues
+
+| Command | Description |
+| --- | --- |
+| `gh issue create` | Create a new GitHub issue straight from your terminal |
+| `gh issue list` | View open issues in the repository |
+| `gh pr create` | Open a Pull Request for your current branch |
+| `gh pr list` | View active pull requests |
